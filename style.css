@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f3f3f3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  history{
+    background-color: blueviolet;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    width: 200px;
+    font-size: 16px;
+
+  }
+  .history ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .history ul li{
+    padding: 5px 0;
+    border-bottom: 1px solid #000;
+  }
+  
+  .calculator {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 270px;
+  }
+  button:active{
+    transform: scale(0.95);
+    background-color: #cfcfcf;
+  }
+  
+  #display {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: right;
+    padding-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  button:hover {
+    background: #d0d0d0;
+  }
+  
+  #theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ddd;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  
+  body.dark {
+    background: #1e1e1e;
+    color: #fff;
+  }
+  
+  body.dark .calculator {
+    background: #2c2c2c;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+  }
+  
+  body.dark #display {
+    background: #444;
+    color: #fff;
+    border: 1px solid #666;
+  }
+  
+  body.dark button {
+    background: #555;
+    color: #fff;
+  }
+  
+  body.dark button:hover {
+    background: #666;
+  }
+  
+  body.dark  {
+    background-color: #333;
+    color: #fff;
+  }
+  

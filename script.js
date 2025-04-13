@@ -55,6 +55,11 @@ function addToHistory(entry) {
 
     }
   };
+  function copyResult(){
+    const display=document.getElementById("display");
+    navigator.clipboard.writeText(display.value);
+    alert("Copied!");
+  }
   document.body.classList.add('light');
   document.getElementById('theme-toggle').addEventListener('click', ()=>{
     const body=document.body;
@@ -72,12 +77,9 @@ function addToHistory(entry) {
     const key = event.key;
   
     if (!isNaN(key) || ['+', '-', '*', '/', '.'].includes(key)) {
-      appendValue(key);
-    } else if (key === 'Enter') {
-      calculate();
-    } else if (key === 'Backspace') {
-      backspace();
-    } else if (key === 'c' || key === 'C') {
-      clearDisplay();
+      if(key==='Enter') calculate();
+      else if(key==='Backspace') backspace();
+      else appendValue(key);
     }
   });
+  
